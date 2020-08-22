@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="eS">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bono Familiar Universal</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/favicons.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="contenedor1">
+                <a href="index.html">SUBSIDIO MONETARIO</a>
+            </div>
+            <div class="contenedor2">
+                <a class="contenedor2-unit" href="#">
+                    <span><img src="img/exit_rojo.png" alt=""></span>
+                    <div class="contenedor2-unit-red"> RENUNCIA AL BONO</div>
+                </a>
+                <a class="contenedor2-unit" href="#">
+                    <span><img src="img/pregunta.png" alt=""></span>
+                    <div> PREGUNTAS FRECUENTES</div>
+                </a>
+                <a class="contenedor2-unit" href="#">
+                    <span><img src="img/registra.png" alt=""></span>
+                    <div> REGISTRA TU CASO</div>
+                </a>
+            </div>
+            <div class="contenedor3">
+                <img src="img/Gobierno_del_peru.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="grid-main">
+            <div class="imgmain">
+                <img src="img/bono_peru.png" alt="">
+            </div>
+            <div class="info-m">
+                <div class="h2-m">
+                    <h2>Consulta aquí tu subsidio monetario</h2>
+                </div>
+                <div class="info-m1">
+                    <div>
+                        <p>Antes de ingresar tus datos, te recomendamos que revises los pasos que debes seguir a través
+                            de
+                            este <a class="info-m1-video"
+                                href="https://bonouniversalfamiliar.pe/tutoriales.html">video tutorial</a> </p>
+                    </div>
+                    <div class="form-m">
+                        <form action="">
+                            <div class="form-m1">
+                                <div class="form-m-dni">
+                                    <img src="img/dni_rojo.jpg" alt="">
+                                    <input type="text" placeholder="DNI" autocomplete="off" auto-focus="true" min="9"
+                                        minlength="8" maxlength="8"></p>
+                                </div>
+                                <div class="form-m-fecha">
+                                    <img src="img/fecha_rojo.jpg" alt="">
+                                    <input type="date" name="fecha" placeholder="Fecha de emisión del DNI"></p>
+                                </div>
+                                <div class="form-m-pregunta">
+                                    <p><span><img src="img/pregunta_chico.png" alt=""></span><a href="#">¿Dónde esta la
+                                            fecha de emisión de mi DNI?</a> </p>
+                                </div>
+                            </div>
+                            <!-- RECAPTCHA -->
+                            <div class="form-m-captcha">
+                                <div class="conte_form_80 align-items-center justify-content-center mb-4 ng-scope g-recaptcha"
+                                    ng-if="constants.RECAPTCHA_KEY">
+                                    <div vc-recaptcha="" ng-if="showRecaptcha"
+                                        class="recaptcha-contenedor ng-scope ng-isolate-scope" theme="'light'"
+                                        lang="'es-419'" key="constants.RECAPTCHA_KEY"
+                                        on-create="setRecaptchaId(widgetId)"
+                                        on-success="setRecaptchaResponse(response)">
+                                        <div style="width: 304px; height: 78px;">
+                                            <div><iframe
+                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lcf5PkUAAAAAJnb2F5WlIoxlCunlxQACLxDVn11&amp;co=aHR0cHM6Ly9ib25vdW5pdmVyc2FsZmFtaWxpYXIucGU6NDQz&amp;hl=es-419&amp;v=aUMtGvKgJZfNs4PdY842Qp03&amp;theme=light&amp;size=normal&amp;cb=44fc6ndjidet"
+                                                    width="304" height="78" role="presentation" name="a-coq4p077c2ja"
+                                                    frameborder="0" scrolling="no"
+                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                            </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                class="g-recaptcha-response"
+                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                        </div><iframe _idm_frm_="102" style="display: none;"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="form-m-boton" type="submit">CONSULTAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-grid1">
+                <img src="img/mtpe.png" alt="">
+                <img src="img/midis.png" alt="">
+            </div>
+            <div class="footer-grid1 footer-der">
+                <img src="img/reniec.png" alt="">
+                <img src="img/elperuprimero.png" alt="">
+            </div>
+        </div>
+    </footer>
+    <!--<footer class="row">
+        <div class="conte_footer" ng-class="{on_login: !changeFooter, on_pag_inter: changeFooter}">
+                <div class="mr-auto"><div class="footer_mtpe no_movil" ng-show="isImgMTPE">
+                        <img src="img/mtpe.png" alt="mtpe"></div><div class="footer_midis no_movil" ng-show="isImgMIDIS">
+                                <img src="img/midis.png" alt="midis"></div></div>
+                        <div class="ml-auto d-flex align-items-center justify-content-center">
+                        <div class="footer_reniec no_movil"><img src="img/reniec.png" alt="reniec"></div>
+                        <div class="footer_elperuprimero no_movil"><img src="img/elperuprimero.png" alt="El Perú Primero"></div>
+                                <a class="ml-auto btn_regresar no_movil" ng-click="cancelRegister()" href="#" ng-if="changeFooter">
+                                <img src="img/salir.png" alt=""><div class="text_footer"></div></a></div>
+                        <div class="conte_logosfooter clearfix solo_movil">
+                                <div class="footer_reniec">
+                                      <img src="img/reniec.png" alt="reniec"></div>
+                                <div class="footer_mtpe" ng-show="isImgMTPE">
+                                        <img src="img/mtpe.png" alt="mtpe"></div>
+                                <div class="footer_midis" ng-show="isImgMIDIS"><img src="img/midis.png" alt="midis"></div>
+                                <div class="footer_elperuprimero"><img src="img/elperuprimero.png" alt="El Perú Primero"></div></div></div>
+        </footer></div>
+        <script data-main="dist/bundle-3163ac8.js" src="dist/require.js"></script>-->
+</body>
+
+</html>
