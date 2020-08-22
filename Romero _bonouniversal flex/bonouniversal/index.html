@@ -1,0 +1,113 @@
+<!doctype html><html>
+
+<head><meta charset="utf-8">
+<title>Bono Familiar Universal</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta property="og:image" content="imagenes/graficos.png"><meta property="og:image:secure_url" content="">
+<link rel="icon" type="imagenes/png" href="imagenes/favicon.png"><link rel="stylesheet" href="css/estilos.css">
+
+
+        </head>
+        <body><div class="container altura">
+            <header class="com-flex align-items-center row" ng-controller="headerController">
+                    <div class="footer-auto titulo"><a href="index.html">SUBSIDIO MONETARIO</a>
+                    </div>
+                <div class="header-preguntas">
+                                <a href="#" class="boton-ayuda boton-pregunta"><img class="ico_pregunta" src="imagenes/exit_rojo.png" alt="">
+                        <div class="tenxto-menu texto-color">RENUNCIA AL BONO</div></a>
+                        <a href="#" class="boton-ayuda boton-pregunta"><img class="ico_pregunta" src="imagenes/pregunta.png" alt="">
+                        <div class="tenxto-menu">PREGUNTAS FRECUENTES</div></a><a href="#" class="boton-ayuda btn_registracaso">
+                                <img class="ico_pregunta" src="imagenes/registra.png" alt="">
+                        <div class="tenxto-menu">REGISTRA TU CASO</div></a>
+                </div>
+                <div class="automatico logo_gobierno">
+                        <img src="imagenes/Gobierno_del_peru.png" alt=""></div>
+                </header><div class="container" ui-view></div>
+                
+                <div class="container ng-scope" ui-view=""><div class="contenido ng-scope">
+                        <div class="row">
+                            
+                            <div class="imgbono text-center orden2 nomovil-footer">
+                                <img class="img-fluid" src="imagenes/bono_peru.png" alt="">
+                                
+                            </div>
+                            
+                            <div class="imgbono mb-4 orden1">
+                                <div ng-if="!loadToken" class="ng-scope">
+                                    <div class="cabecera_formulario">
+                                        <h2>Consulta aquí tu subsidio<br> monetario</h2>
+                                    </div>
+                    
+                                    <form name="form" method="post" class="form-login ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-invalid-recaptcha" ng-submit="sendConsult(form.$invalid)" >
+                                        <div class="conte_form">
+                                            <div class="input-group input-group">
+                                                <div class="texto_ayuda">Antes de ingresar tus datos, te recomendamos que revises los pasos
+                                                    que debes seguir a través de este
+                                                    <a href="#" target="_blank">video tutorial</a>
+                                                </div>
+                                                <div class="texto_form footer-m">Ingresa:</div>
+                    
+                                                <div class="conte_imput_login">
+                                                    <input type="text" name="numeroDocumento" class="form_control_dni ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-touched" placeholder="DNI" autocomplete="off" auto-focus="true" min="9" minlength="8" maxlength="8" ng-pattern="/^[0-9]*$/" ng-model="consult.dni" numbers-only="" ng-disabled="loading" ng-required="true" required="required" aria-invalid="true" >
+                                                    
+                                                </div>
+                                                
+                                                <div class="conte_imput_login">
+                                                    <input id="date" type="text" class="form_control_fecha ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" ng-model="consult.date" auto-slash="" minlength="0" maxlength="10" ng-disabled="loading" placeholder="Fecha de emisión del DNI" autocomplete="off" name="numeroDocumento" required="" aria-invalid="true">
+                                                    
+                                                    <div class="ayuda_login" ng-click="showDNI(showHelpDNI)" role="button" tabindex="0">
+                                                        <img class="icono_ayudafechaemision" src="imagenes/pregunta_chico.png" alt="">
+                                                        <div class="text_ayuda">¿Dónde esta la fecha de emisión
+                                                            de mi DNI?
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                    
+                                            <!-- RECAPTCHA_KEY --><div class="conte_form_80 align-items-center justify-content-center mb-4 ng-scope" ng-if="constants.RECAPTCHA_KEY">
+                                                <div vc-recaptcha="" ng-if="showRecaptcha" class="recaptcha-container ng-scope ng-isolate-scope" theme="'light'" lang="'es-419'" key="constants.RECAPTCHA_KEY" on-create="setRecaptchaId(widgetId)" on-success="setRecaptchaResponse(response)"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lcf5PkUAAAAAJnb2F5WlIoxlCunlxQACLxDVn11&amp;co=aHR0cHM6Ly9ib25vdW5pdmVyc2FsZmFtaWxpYXIucGU6NDQz&amp;hl=es-419&amp;v=aUMtGvKgJZfNs4PdY842Qp03&amp;theme=light&amp;size=normal&amp;cb=44fc6ndjidet" width="304" height="78" role="presentation" name="a-coq4p077c2ja" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe __idm_frm__="102" style="display: none;"></iframe></div><!-- end ngIf: showRecaptcha -->
+                                            
+                                            <br><br><br>
+
+                                            
+                                        </div>
+                                        <div class="conte_form_80 mb-4">
+                                            <button id="" type="submit" class="boton_form" ng-disabled="form.$invalid || disabledButton" disabled="disabled">
+                                                
+                                                CONSULTAR
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <footer class="row"
+                ><a class="footer-p footer-m" ng-click="cancelRegister()" href="#" ng-if="changeFooter">
+                        <img src="imagenes/salir_rojo.png" alt=""><div class="tenxto-menu">Salir</div></a>
+                <div class="footer-c" >
+                        <div class="footer-auto"><div class="footer-mov nomovil-footer" ng-show="isImgMTPE">
+                                <img src="imagenes/mtpe.png" alt="mtpe"></div><div class="footer_midis nomovil-footer" ng-show="isImgMIDIS">
+                                        <img src="imagenes/midis.png" alt="midis"></div></div>
+                                <div class="automatico com-flex align-items-center justify-content-center">
+                                <div class="footer_reniec nomovil-footer"><img src="imagenes/reniec.png" alt="reniec"></div>
+                                <div class="footer_elperuprimero nomovil-footer"><img src="imagenes/elperuprimero.png" alt="El Perú Primero"></div>
+                                        <a class="automatico btn_regresar nomovil-footer" ng-click="cancelRegister()" href="#" ng-if="changeFooter">
+                                        </a></div>
+                                <div class="conte_logosfooter clearfix footer-m">
+                                        <div class="footer_reniec">
+                                                <img src="imagenes/reniec.png" alt="reniec"></div>
+                                        <div class="footer-mov" ng-show="isImgMTPE">
+                                                <img src="imagenes/mtpe.png" alt="mtpe"></div>
+                                        <div class="footer_midis" ng-show="isImgMIDIS"><img src="imagenes/midis.png" alt="midis"></div>
+                                        <div class="footer_elperuprimero"><img src="imagenes/elperuprimero.png" alt="El Perú Primero"></div></div></div>
+                </footer></div>
+                <script data-main="css/bundle-3163ac8.js" src="css/require.js"></script>
+        </body>
+
+</html>
